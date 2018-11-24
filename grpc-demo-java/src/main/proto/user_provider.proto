@@ -1,0 +1,25 @@
+// user service provider
+
+// proto语法版本
+syntax = "proto3";
+
+// 可选参数 设置java package
+option java_package = "cn.lpe234.grpc.grpcdemo.grpc";
+
+// 定义对外暴露的服务
+service UserProvider {
+
+    // 根据用户id获取用户信息的服务(具体服务/函数)
+    rpc getByUserId(UserIdRequest) returns (UserVoReplay) {}
+}
+
+// 请求
+message UserIdRequest {
+    uint64 id = 1;          // 用户id 类型为Long
+}
+
+// 响应
+message UserVoReplay {
+    uint64 id = 1;          // 用户id
+    string username = 2;    // 用户名称
+}

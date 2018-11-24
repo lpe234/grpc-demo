@@ -1,0 +1,14 @@
+server:
+  port: 10080
+spring:
+  application:
+    name: grpc-demo
+# grpc
+grpc:
+  server:
+    address: 0.0.0.0
+    port: 10081
+# logging
+logging:
+  level:
+    cn.lpe234.grpc.grpcdemo.grpcprovider: debug
